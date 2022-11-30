@@ -1,0 +1,13 @@
+
+.todo{
+    &.important{
+        color: orange;
+    }
+    &.completed{
+        text-decoration: line-through;
+    }
+    &.incompleted{
+        text-decoration: none;
+        color: black;
+    }
+}
