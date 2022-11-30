@@ -4,3 +4,4 @@
   (removeTodo)="todoService.deleteTodo($event)"
   (toggleStatus)="todoService.changeStatus($event)"
 ></app-todo-item>
+<app-add-form (getValue)="todoService.addTodo($event)"></app-add-form>

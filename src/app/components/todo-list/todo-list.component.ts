@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy } from '@angular/compiler';
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
@@ -8,9 +7,9 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./todo-list.component.scss'],
 
 })
-export class TodoListComponent  {
+export class TodoListComponent {
 
-  constructor(public todoService: TodoService){
+  constructor(public todoService: TodoService) {
 
   }
 
