@@ -1,0 +1,7 @@
+<div>
+    <input placeholder="search" [(ngModel)]="searchInput" (keyup)="onChangeFilter()"/>
+    <select [(ngModel)]="activeFilter" #selectedOption  (change)="onChangeFilter()">
+          <option *ngFor="let option of filters">{{option}}</option>
+      </select>
+  </div>
+  

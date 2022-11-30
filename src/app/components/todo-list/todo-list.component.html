@@ -1,3 +1,4 @@
+<app-search-form  (filterTodo)="todoService.setFiltres($event)" [searchInput]="todoService.searchField"></app-search-form>
 <app-todo-item
   *ngFor="let todo of todoService.todos"
   [todo]="todo"

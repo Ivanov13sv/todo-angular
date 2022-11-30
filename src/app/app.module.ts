@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoItemComponent,
     TodoListComponent,
-    AddFormComponent
+    AddFormComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,

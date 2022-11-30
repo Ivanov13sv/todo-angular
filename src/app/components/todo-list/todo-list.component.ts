@@ -9,10 +9,6 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class TodoListComponent {
 
-  constructor(public todoService: TodoService) {
-
-  }
-
-
+  constructor(public todoService: TodoService) { }
 
 }
