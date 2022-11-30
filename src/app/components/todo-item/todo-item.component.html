@@ -1,0 +1,8 @@
+<li class="todo" [class]="todo.status">
+    {{ todo.description }}
+    <select (change)="onChangeStatus()" [(ngModel)]="activeStatus">
+      <option *ngFor="let option of allStatuses">{{ option }}</option>
+    </select>
+    <button (click)="removeTodo.emit(todo.id)">delete</button>
+  </li>
+  
