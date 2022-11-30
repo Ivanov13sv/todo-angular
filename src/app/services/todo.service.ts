@@ -12,9 +12,9 @@ export class TodoService {
   searchField: string = ''
 
   private _allTodos: Todo[] = [
-    { description: 'I will get this job', status: 'completed', id: 1 },
-    { description: 'Angular', status: 'important', id: 2 },
-    { description: 'MEAN', status: 'incompleted', id: 3 },
+    { description: 'read a book', status: 'completed', id: 1 },
+    { description: 'make a pie', status: 'important', id: 2 },
+    { description: 'go in the park', status: 'incompleted', id: 3 },
   ]
 
 
