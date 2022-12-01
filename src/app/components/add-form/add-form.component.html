@@ -1,2 +1,4 @@
-<input placeholder="new todo" [(ngModel)]="value"  (keyup.enter)="addTodo()"/>
-<button (click)="addTodo()">add</button>
+<div class="add-form">
+  <input class="add-form__field" placeholder="new todo" [(ngModel)]="value" (keyup.enter)="addTodo()" />
+  <button class="add-form__btn" (click)="addTodo()">&plus;</button>
+</div>

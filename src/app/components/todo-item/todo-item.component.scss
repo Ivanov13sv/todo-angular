@@ -1,13 +1,79 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  &.important {
+    color: orange;
+  }
+  &.completed {
+    text-decoration: line-through;
+  }
+  &.incompleted {
+    text-decoration: none;
+    color: black;
+  }
+  &__delete-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    &:hover {
+      img {
+        animation: wiggle 2s linear infinite;
+      }
+    }
+  }
+  &__text {
+    flex: 1 1 auto;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 10px;
+  }
+}
 
-.todo{
-    &.important{
-        color: orange;
-    }
-    &.completed{
-        text-decoration: line-through;
-    }
-    &.incompleted{
-        text-decoration: none;
-        color: black;
-    }
+/* Animation property */
+
+/* Keyframes */
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+body {
+  background: #000;
 }

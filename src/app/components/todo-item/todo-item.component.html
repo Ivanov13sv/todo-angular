@@ -1,8 +1,10 @@
 <li class="todo" [class]="todo.status">
-    {{ todo.description }}
-    <select (change)="onChangeStatus()" [(ngModel)]="activeStatus">
-      <option *ngFor="let option of allStatuses">{{ option }}</option>
-    </select>
-    <button (click)="removeTodo.emit(todo.id)">delete</button>
-  </li>
-  
+  <span class="todo__text"> {{ todo.description }}</span>
+
+  <select (change)="onChangeStatus()" [(ngModel)]="activeStatus">
+    <option *ngFor="let option of allStatuses">{{ option }}</option>
+  </select>
+  <button class="todo__delete-btn" (click)="removeTodo.emit(todo.id)">
+    <img src="../../../assets/img/delete.png" />
+  </button>
+</li>

@@ -1,0 +1,22 @@
+.add-form{
+    display: flex;
+    justify-content: center;
+    &__field{
+        border: 1px solid black;
+        border-right: 0;
+        border-radius:  5px 0 0 5px;
+        padding: 5px;
+    }
+    &__btn{
+        border: 1px solid black;
+        border-left: 0;
+        border-radius: 0 5px 5px 0;
+        font-size: 20px;
+        padding: 5px 15px;
+        background-color: rgb(236, 235, 235);
+        cursor: pointer;
+        &:hover{
+            filter: brightness(95%);
+        }
+    }
+}

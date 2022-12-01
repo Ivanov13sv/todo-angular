@@ -1,0 +1,26 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+
+  &__field {
+    padding: 6px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid black;
+    border-right: none;
+  }
+
+  &__select {
+    padding: 5px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid black;
+    border-left: none;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(95%);
+    }
+  }
+}
+
+.search {
+}
