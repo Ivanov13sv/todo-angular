@@ -1,0 +1,16 @@
+<header class="header">
+    <a class="header__logo" routerLink="/">Logo</a>
+    <nav class="navbar">
+        <a class="navbar__link" routerLink="/todos">{{
+            "todos" | titlecase
+        }}</a>
+        <a class="navbar__link" routerLink="/about">{{
+            "about" | titlecase
+        }}</a>
+    </nav>
+    <div class="logout">
+        <button class="navbar__link" *ngIf="authService.user" (click)="authService.logout()">
+            Logout
+        </button>
+    </div>
+</header>

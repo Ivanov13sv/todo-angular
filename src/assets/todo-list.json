@@ -1,0 +1,5 @@
+[
+    { "description": "read a book", "status": "completed", "id": 1 },
+    { "description": "make a pie", "status": "important", "id": 2 },
+    { "description": "go in the park", "status": "incompleted", "id": 3 }
+]

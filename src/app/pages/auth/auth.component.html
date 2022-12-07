@@ -1,0 +1,5 @@
+<form class="form" [formGroup]="form" (submit)="onSubmitHandler()">
+    <input placeholder="email" formControlName="login" />
+    <input placeholder="password" formControlName="password" />
+    <button >{{loadingService.loading? 'Loading' : 'Enter'}}</button>
+</form>

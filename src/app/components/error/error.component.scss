@@ -1,0 +1,18 @@
+.error{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 10px;
+    background-color: tomato;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    &__btn{
+        padding: 5px;
+        font-size: 14px;
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
+}

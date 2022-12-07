@@ -1,13 +1,13 @@
 <div class="list">
-  <app-search-form
-    (filterTodo)="todoService.setFiltres($event)"
-    [searchInput]="todoService.searchField"
-  ></app-search-form>
-  <app-todo-item
-    *ngFor="let todo of todoService.todos"
-    [todo]="todo"
-    (removeTodo)="todoService.deleteTodo($event)"
-    (toggleStatus)="todoService.changeStatus($event)"
-  ></app-todo-item>
-  <app-add-form (getValue)="todoService.addTodo($event)"></app-add-form>
+    <app-search-form
+        (filterTodo)="todoService.setFiltres($event)"
+        [searchInput]="todoService.searchField"
+    ></app-search-form>
+    <app-todo-item
+        *ngFor="let todo of todoService.todos"
+        [todo]="todo"
+        (removeTodo)="todoService.deleteTodo($event)"
+        (toggleStatus)="todoService.changeStatus($event)"
+    ></app-todo-item>
+    <app-add-form (getValue)="todoService.addTodo($event)"></app-add-form>
 </div>

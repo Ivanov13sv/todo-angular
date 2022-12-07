@@ -1,0 +1,7 @@
+<main class="main">
+    <!-- <app-spiner *ngIf="loading; else elseBlock"></app-spiner> -->
+    <app-spiner *ngIf="loadingService.loading; else elseBlock" ></app-spiner>
+    <ng-template #elseBlock>
+        <app-todo-list></app-todo-list>
+    </ng-template>
+</main>

@@ -1,16 +1,16 @@
 <div class="search-form">
-  <input
-    class="search-form__field"
-    placeholder="search"
-    [(ngModel)]="searchInput"
-    (keyup)="onChangeFilter()"
-  />
-  <select
-    class="search-form__select"
-    [(ngModel)]="activeFilter"
-    #selectedOption
-    (change)="onChangeFilter()"
-  >
-    <option *ngFor="let option of filters">{{ option }}</option>
-  </select>
+    <input
+        class="search-form__field"
+        placeholder="search"
+        [(ngModel)]="searchInput"
+        (keyup)="onChangeFilter()"
+    />
+    <select
+        class="search-form__select"
+        [(ngModel)]="activeFilter"
+        #selectedOption
+        (change)="onChangeFilter()"
+    >
+        <option *ngFor="let option of filters">{{ option }}</option>
+    </select>
 </div>

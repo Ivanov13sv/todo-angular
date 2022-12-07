@@ -1,27 +1,37 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoItemComponent } from './components/todo-item/todo-item.component';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { AddFormComponent } from './components/add-form/add-form.component';
-import { SearchFormComponent } from './components/search-form/search-form.component';
+import { TodosModule } from './modules/todos/todos.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ErrorComponent } from './components/error/error.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodoItemComponent,
-    TodoListComponent,
-    AddFormComponent,
-    SearchFormComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule, FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        AboutComponent,
+        ErrorComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        TodosModule,
+        AuthModule,
+        HttpClientModule,
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true,
+        },
+    ],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
