@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ErrorComponent } from './components/error/error.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { InputComponent } from './components/input/input.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -17,13 +19,14 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
         HeaderComponent,
         AboutComponent,
         ErrorComponent,
+        InputComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         TodosModule,
         AuthModule,
-        HttpClientModule,
+        HttpClientModule,FormsModule
     ],
     providers: [
         {

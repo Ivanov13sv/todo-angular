@@ -2,9 +2,28 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from 'src/app/environments/environment';
-import { catchError, delay, Observable, retry, tap, throwError } from 'rxjs';
+import {
+    catchError,
+    concatMap,
+    delay,
+    filter,
+    map,
+    Observable,
+    retry,
+    tap,
+    throwError,
+    of,
+    from,
+    Subject,
+    toArray,
+} from 'rxjs';
 import { ErrorService } from './error.service';
 import { LoadingService } from './loading.service';
+
+interface IUser {
+    id: number;
+    name: string;
+}
 
 @Injectable({
     providedIn: 'root',
@@ -76,6 +95,19 @@ export class AuthService {
                 catchError(this.errorHandler.bind(this))
             );
     }
+
+    // getUsers() {
+    //     return this.http
+    //         .get<Observable<IUser[]>>(
+    //             'https://jsonplaceholder.typicode.com/users'
+    //         )
+    //         .pipe(
+    //             tap(console.log),
+    //             map((data) => from(data)),
+    //             filter((data: any) => data.id === 1),
+    //             toArray()
+    //         );
+    // }
 
     logout() {
         localStorage.removeItem('del_meetups_auth_token');
